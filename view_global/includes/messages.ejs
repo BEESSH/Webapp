@@ -1,0 +1,46 @@
+<% if(locals.errors){ %> <% errors.forEach(function(error) { %>
+  <div class="alert alert-danger alert-with-icon show fade">
+    <button type="button" aria-hidden="true" class="close alert-dismissible" data-dismiss="alert" aria-label="Close">
+      <i class="tim-icons icon-simple-remove"></i>
+    </button>
+    <span data-notify="icon" class="tim-icons icon-support-17"></span>
+    <span>
+    <b> Oh snap! - </b> <%= error.msg %></span>
+  </div>
+<% }); %> <% } %> <% if(success_msg != ''){ %>
+  <div class="alert alert-success alert-with-icon show fade">
+    <button type="button" aria-hidden="true" class="close alert-dismissible" data-dismiss="alert" aria-label="Close">
+      <i class="tim-icons icon-simple-remove"></i>
+    </button>
+    <span data-notify="icon" class="tim-icons icon-bell-55"></span>
+    <span>
+      <b> Well done! - </b> <%= success_msg %></span>
+  </div>
+<% } %> <% if(error_msg != ''){ %>
+  <div class="alert alert-warning alert-with-icon show fade">
+    <button type="button" aria-hidden="true" class="close alert-dismissible" data-dismiss="alert" aria-label="Close" >
+      <i class="tim-icons icon-simple-remove"></i>
+    </button>
+    <span data-notify="icon" class="tim-icons icon-bulb-63"></span>
+    <span>
+      <b> Warning! - </b> <%= error_msg%></span>
+  </div>
+<% } %> <% if(error != ''){ %>
+  <div class="alert alert-danger alert-with-icon show fade">
+    <button type="button" aria-hidden="true" class="close alert-dismissible" data-dismiss="alert" aria-label="Close">
+      <i class="tim-icons icon-simple-remove"></i>
+    </button>
+    <span data-notify="icon" class="tim-icons icon-support-17"></span>
+    <span>
+    <b> Oh snap! - </b> <%= error %></span>
+  </div>
+<% } %> <% if(admin_msg != ''){ %>
+  <div class="alert alert-danger alert-with-icon show fade">
+    <button type="button" aria-hidden="true" class="close alert-dismissible" data-dismiss="alert" aria-label="Close">
+      <i class="tim-icons icon-simple-remove"></i>
+    </button>
+    <span data-notify="icon" class="tim-icons icon-support-17"></span>
+    <span>
+    <b> Oh Admin! - </b> <%= admin_msg %></span>
+  </div>
+<% } %>
